@@ -8,7 +8,11 @@
   
 
   export default {
-    name: "Chat"
+    name: "Chat",
+    data: () => ({
+      
+    })
+    
     
   }
 </script>

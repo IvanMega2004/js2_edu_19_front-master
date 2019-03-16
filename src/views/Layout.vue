@@ -1,28 +1,45 @@
 <template>
   <div>
-    <h1>Наше приложение</h1>
-    <nav>
-      <ul>
-        <li>
-          <router-link to="/">Новости</router-link>
-        </li>
-        <li>
-          <router-link to="/chat">Чат</router-link>
-        </li>
-        <li>
-          <router-link to="/shop">Магазин</router-link>
-        </li>
-        <li>
-          <router-link to="/settings">Установки</router-link>
-        </li>
-      </ul>
-    </nav>
-    <router-view></router-view>
+    <v-container grid-list-md text-xs-center>
+      <v-layout row wrap>
+        <v-flex xs3>
+          <navigation></navigation>
+        </v-flex>
+        <v-flex xs9>
+          <router-view></router-view>
+        </v-flex>
+      </v-layout>
+    </v-container>
   </div>
 </template>
 
 <script>
+import Navigation from "@/components/Navigation";
+
 export default {
-  name: "Layout"
+  name: "Layout",
+  components: { Navigation }
 };
 </script>
+
+<style>
+body {
+  font-family: sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+.title,
+h2,
+h3 {
+  color: blue;
+  text-align: center;
+}
+
+.text {
+  color: grey;
+  margin-top: 10px;
+}
+</style>

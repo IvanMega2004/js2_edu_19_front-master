@@ -1,19 +1,19 @@
 <template>
-  <div>
-   <layout></layout>
-  </div>
-
+  <v-app>
+    <div>
+      <layout></layout>
+    </div>
+  </v-app>
 </template>
 
 <script>
-
-import Layout from '@/views/Layout';
+import Layout from "@/views/Layout";
 
 export default {
   name: "App",
-  components: {Layout},
+  components: { Layout },
   data: () => ({
-    page: "chat"
-  })    
+    
+  })
 };
 </script>
