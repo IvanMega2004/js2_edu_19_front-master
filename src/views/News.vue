@@ -31,7 +31,10 @@
     name: "News",
     data: () => ({}),
     computed: {
-      ...mapState(["news"])
+
+      ...mapState({
+        news: state => state.news.news
+      })
     },
     methods: {
       ...mapActions(["addNews"]),
@@ -40,7 +43,7 @@
         let item = {
           title: "Сделано с любовью",
           text: "Vuex прекрасен",
-          img: ''
+          img: ""
         };
         this.addNews(item);
       }
