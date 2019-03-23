@@ -1,10 +1,5 @@
-import Vue from "vue";
-import Vuex from "vuex";
-
-Vue.use(Vuex);
-
-export default new Vuex.Store({
-  state: {
+export default {
+state: {
     news: [
       {
         title: "Хранилище",
@@ -26,4 +21,4 @@ newItem.push(item);
 commit("setNews", newItem);
     }
   }
-});
+}
